@@ -5,9 +5,12 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
+import bookstack.persistence.dao.KategoriaDAO;
 import bookstack.persistence.dao.AuthorDAO;
 import bookstack.persistence.dao.BookDAO;
 import bookstack.persistence.entities.Author;
+
+import bookstack.persistence.entities.Kategoria;
 import bookstack.persistence.entities.Book;
 
 @Stateless
@@ -18,6 +21,9 @@ public class BookService {
 	
 	@Inject
 	private AuthorDAO authorDao;
+	
+	@Inject
+	private KategoriaDAO kategoriaDao;
 	
 	public List<Book> getBooksByTitle(String title) {
 		return bookDao.getBooksByTitle(title);
@@ -32,7 +38,7 @@ public class BookService {
 		if(authorFromDb != null){
 			book.setAutor(authorFromDb);
 		}else{
-			//neexistuje vytvorime noveho
+			
 			book.setAutor(author);
 		}
 		

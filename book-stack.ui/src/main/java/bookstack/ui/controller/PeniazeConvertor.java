@@ -14,7 +14,7 @@ public class PeniazeConvertor implements Converter {
 	private String typ;
 	double suma_nova;
 	
-	// getters and setters for new suma
+	
 	
 	public double getSuma_nova() {
 		return suma_nova;
@@ -24,10 +24,10 @@ public class PeniazeConvertor implements Converter {
 		this.suma_nova = suma_nova;
 	}
 	
-	// getters and setters for typ
+	
 
 	public String getTyp() {
-		if (typ == null) typ = "value2"; // This will be the default selected item.
+		if (typ == null) typ = "value2"; 
 	    return typ;
 	}
 
@@ -35,7 +35,7 @@ public class PeniazeConvertor implements Converter {
 		this.typ = typ;
 	}
 	
-	// getters and setters for suma
+	
 	
 	public double getSuma() {
 		return suma;
@@ -45,7 +45,7 @@ public class PeniazeConvertor implements Converter {
 		this.suma = suma;
 	}
 	
-	// method for button
+
 
 	public void odosli() {
 		System.out.println(typ+" "+suma);
@@ -60,7 +60,7 @@ public class PeniazeConvertor implements Converter {
 		}
 	}
 	
-	// Converter converts suma to Double
+
 
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent component, String newValue) {
@@ -70,7 +70,7 @@ public class PeniazeConvertor implements Converter {
 
 	@Override
 	public String getAsString(FacesContext arg0, UIComponent arg1, Object arg2) {
-		 System.out.println("Aktivoval som 2");
+		 
 		return arg2.toString();
 	}
 	

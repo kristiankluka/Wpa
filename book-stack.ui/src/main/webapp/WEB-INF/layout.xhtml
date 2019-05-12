@@ -7,7 +7,7 @@
 
 <!-- f:loadBundle basename="resources" var="msg" /-->
 <h:head>
-	<title><ui:insert name="pageTitle">UniStats</ui:insert></title>
+	<title><ui:insert name="pageTitle">Kniha</ui:insert></title>
 	<link rel="stylesheet"
 		href="#{request.contextPath}/resources/css/font-awesome/css/font-awesome.min.css" />
 	<link rel="stylesheet"
@@ -22,6 +22,7 @@
 <h:body styleClass="wrapper">
 	<div>
 		<ui:include src="/header.xhtml" />
+		
 	</div>
 	<div class="ui-grid ui-grid-responsive">
 
@@ -37,8 +38,11 @@
 								<p:menuitem value="Moje knihy"
 									action="home.xhtml?faces-redirect=true"></p:menuitem>
 							</p:submenu>
-							<p:submenu label="Iba taka zalozka">
-								<p:menuitem value="Prazdny item" action="#"></p:menuitem>
+							<p:submenu label="Autori">
+								<p:menuitem value="#{lang['autor.new']}" action="autor.xhtml?faces-redirect=true"></p:menuitem>
+							</p:submenu>
+							<p:submenu label="Kategoria">
+								<p:menuitem value="kategorie" action="kate.xhtml?faces-redirect=true"></p:menuitem>
 							</p:submenu>
 						</p:menu>
 					</h:form>

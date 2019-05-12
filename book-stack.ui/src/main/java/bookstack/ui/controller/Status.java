@@ -5,8 +5,8 @@ import javax.persistence.Enumerated;
 
 public enum Status {
 
-    DOLAR("Dolár"),
-    LIBRA("Libra");
+    DOLAR("$"),
+    LIBRA("GBP");
 	
 	@Enumerated(EnumType.STRING)
     private String label;
